@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: construction-bot
+    runtime: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7909237406:AAF6HdtzKa_MqWUaTNrqL-ZpszFbiKI7gg
+      - key: ADMIN_IDS
+        value: 966622218
+      - key: DATABASE_URL
+        value: sqlite:///construction.db
